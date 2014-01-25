@@ -10,7 +10,7 @@
 	  	<!--input type="button" id="btnpingOn" value="" /-->
 	  	<!--input type="button" id="btnpingOff" value="" /-->
       <div class="btnping" id="btnpingOn"><img src="images/im_free.png" /><br/>I'M FREE<br/><span style="font-size: 30px;">come and find me now!</span></div>
-      <div class="btnping" id="btnpingOff"><img src="images/nevermind.png" /><br/>NEVER MIND<br/><span style="font-size: 30px;">maybe later...</span></div>
+      <div class="btnping" id="btnpingOff"><img src="images/nevermind.png" /><br/>NEVER MIND<br/><span style="font-size: 30px;">click again to turn off free-ness</span></div>
 	    <div class="footer">
 	    	<div class="half_footer" id="whos_free"><img src="images/whos_free.png" /><br/>Who's Free</div>
         <div class="footer_sep">&nbsp;</div>

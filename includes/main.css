@@ -101,7 +101,10 @@ body {
 .half_footer img {
 	vertical-align: middle;
 }
-
+#listcont {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
 .listitem {
 	height: 115px;
 	background: #444;
@@ -148,6 +151,9 @@ body {
 	left: 0px;
 	right: 0px;
 	top: 180px;
+}
+#map-canvas {
+	bottom: 20px;
 }
 #chatroom {
 	bottom: 120px;

@@ -21,8 +21,19 @@ function getChatters($poster) {
 	$result = mysql_query("SELECT * FROM people WHERE user IN ({$cq})");
 	$ret = array();
 	while ($row = mysql_fetch_assoc($result)) {
+		unset($chatters[$row['user']]);
 		$ret[] = $row;
 	}
+	
+	foreach (array_keys($chatters) as $ch) {
+		$ret[] = (object) array(
+			user => $ch,
+			longitude => 0,
+			latitude => 0,
+			blurb => "(hiding)"
+		);
+	}
+	
 	return json_encode($ret);
 }
 function chat($poster, $receiver, $message) {

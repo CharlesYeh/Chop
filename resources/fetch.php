@@ -41,5 +41,6 @@ function getPointsInBox($user, $minLong, $maxLong, $minLat, $maxLat) {
 			'latitude' => doubleval($row['latitude']),
 			'createTime' => intval($row['createTime']));
 	}
+	
 	return json_encode($output);
 }

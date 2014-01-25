@@ -220,6 +220,7 @@ var LOADED_API = 2;
 
 var loaded = 0;
 var loadedMsg = "";
+var lastMarkers = new Array();
 function loadedMap(msg) {
 	if (loaded != LOADED_API) {
 		loaded = LOADED_DATA;
@@ -229,7 +230,12 @@ function loadedMap(msg) {
 	
 	var items = eval('(' + msg + ')');
 	
-	for (var i in items) {
+	for (var i in lastMarkers) {
+		lastMarkers[i].setMap(null);
+	}
+	lastMarkers = new Array();
+	
+	for (i in items) {
 		var it = items[i];
 		var d = coordToDistance(longitude, it.longitude, latitude, it.latitude);
 		var ll = new google.maps.LatLng(it.latitude, it.longitude);
@@ -239,12 +245,14 @@ function loadedMap(msg) {
 			visible: true,
 			position: ll
 		});
+		lastMarkers.push(m);
 		var infowindow = new google.maps.InfoWindow({
-      content: "<a style='text-decoration: none;' href='javascript: showChat(" + JSON.stringify(it) + ")'><span style='font-size: 20px; color: #000;'>I AM " + it.blurb + "</span></a>",
+      content: "<a style='text-decoration: none;' href='javascript: showChat(" + JSON.stringify(it) + ")'><span style='font-size: 20px; color: #000;'>I AM: " + it.blurb + "</span></a>",
 			position: ll
 	  });
 		
 		infowindow.open(map);
+		lastMarkers.push(infowindow);
 		
 		(function(it) {
 			google.maps.event.addListener(m, 'click', 
@@ -256,9 +264,19 @@ function loadedMap(msg) {
 	}
 	map.setZoom(18);
 }
+function compareDist(a, b) {
+	return (getDistance(a) < getDistance(b)) ? -1 : 1
+}
+function getDistance(a) {
+	var dg = a.longitude - longitude;
+	var da = a.latitude - latitude;
+	return dg * dg + da * da;
+}
 function loadedList(msg) {
 	var items = eval('(' + msg + ')');
 	$("#listcont").empty();
+	
+	items.sort(compareDist);
 	
 	// populate list items
 	for (var i in items) {
