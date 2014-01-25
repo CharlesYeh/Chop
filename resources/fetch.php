@@ -20,9 +20,11 @@ function getPointsInBox($user, $minLong, $maxLong, $minLat, $maxLat) {
 	// sanitization
 	$user = mysql_real_escape_string(substr($user, 0, 32));
 
-	$result = mysql_query("SELECT * FROM people WHERE
-		latitude > '{$minLat}' AND latitude < '{$maxLat}' AND
-		longitude > '{$minLong}' AND longitude < '{$maxLong}';");
+	// 1 minute cutoff
+	$cutoff = time() - 60;
+	$result = mysql_query("SELECT * FROM people WHERE user <> '{$user}' AND
+		latitude > {$minLat} AND latitude < {$maxLat} AND
+		longitude > {$minLong} AND longitude < {$maxLong} AND createTime > {$cutoff};");
 	
 	/*if (mysql_num_rows($result) > 200) {
 		$result = mysql_query("SELECT * ");

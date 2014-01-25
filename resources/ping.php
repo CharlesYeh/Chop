@@ -14,20 +14,11 @@ function pingOn($user, $blurb, $longitude, $latitude) {
 	$createTime = time();
 	
 	// i'm available!!
-	$result = mysql_query("INSERT INTO people VALUES ('{$user}', '{$blurb}',
-		'{$latitude}', '{$longitude}', '{$createTime}')");
-	/*if (mysql_num_rows($result) > 200) {
-		$result = mysql_query("SELECT * ");
+	$result = mysql_query("UPDATE people SET createTime = {$createTime} WHERE user = '{$user}'");
+	if (mysql_affected_rows($result) == 0) {
+		$result = mysql_query("INSERT INTO people VALUES ('{$user}', '{$blurb}',
+			'{$longitude}', '{$latitude}', '{$createTime}')");
 	}
-	
-	// get row in db
-	while ($row = mysql_fetch_assoc($result)) {
-		$row['user'];
-		$row['blurb'];
-		$row['longitude'];
-		$row['longitude'];
-		$row['latitude'];
-	}*/
 }
 
 function pingOff($user) {

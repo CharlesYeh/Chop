@@ -1,0 +1,203 @@
+
+@font-face {
+	font-family: ApercuLight;
+	src: url('apercu_light_002.otf');
+}
+@font-face {
+	font-family: Apercu;
+	src: url('apercu_regular.otf');
+}
+@font-face {
+	font-family: ApercuMedium;
+	src: url('apercu_medium.otf');
+}
+@font-face {
+	font-family: ApercuBold;
+	src: url('apercu_bold.otf');
+}
+
+body {
+	margin: 0px;
+	background-color: #222;
+	color: #DBF1F8;
+	font-size: 40px;
+}
+
+.blurb_cont {
+	font-family: ApercuBold;
+	height: 180px;
+	margin: 40px;
+	background: #444;
+	text-align: right;
+	padding: 15px;
+}
+#blurb {
+	font-family: ApercuLight;
+	font-size: 40px;
+	margin-left: 5px;
+	background: #333;
+	border: none;
+	color: #FFF;
+	
+	width: 85%;
+	height: 100%;
+	
+	vertical-align: top;
+}
+.btnping {
+	font-family: ApercuBold;
+	font-size: 120px;
+	padding-top: 100px;
+	
+	background: #444;
+	text-align: center;
+	vertical-align: middle;
+	
+	height: 450px;
+	
+	margin: 40px;
+	margin-top: 0px;
+}
+#btnpingOff {
+	display: none;
+}
+
+.header {
+	height: 80px;
+	font-family: ApercuBold;
+	
+	margin: 40px;
+	margin-bottom: 100px;
+}
+.footer {
+	font-family: ApercuBold;
+	
+	position: absolute;
+	top: 100%;
+	
+	height: 210px;
+	
+	left: 0px;
+	right: 0px;
+	margin-left: 40px;
+	margin-right: 40px;
+	
+	margin-top: -280px;
+	text-align: center;
+}
+.footer_sep {
+	height: 100%;
+	width: 2%;
+	float: left;
+}
+.half_footer {
+	background: #444;
+	width: 49%;
+	height: 100%;
+	float: left;
+	padding-top: 20px;
+	text-align: center;
+}
+.half_footer img {
+	vertical-align: middle;
+}
+
+.listitem {
+	height: 115px;
+	background: #444;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+	
+	font-family: ApercuBold;
+	
+	text-align: left;
+	vertical-align: middle;
+}
+.listitem div {
+	float: left;
+}
+.listitem .info {
+	float: right;
+}
+.here {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 40px;
+}
+.blurbdiv {
+	padding-top: 10px;
+}
+.blurbs {
+	font-family: ApercuLight;
+}
+.dist {
+	font-size: 35px;
+	color: #1f7775;
+}
+#chatters img {
+	margin: 12px;
+}
+#map {
+	width: 100%;
+	height: 100%;
+}
+#map-canvas, #chatroom {
+	position: absolute;
+	margin: 40px;
+	left: 0px;
+	right: 0px;
+	top: 180px;
+}
+#chatroom {
+	bottom: 120px;
+}
+	#chatTitle {
+		font-family: ApercuBold;
+	}
+	#messages {
+		background: #444;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+		.bubble {
+			width: 70%;
+			word-break: break-word;
+			font-family: ApercuLight;
+			padding: 20px;
+			margin: 20px;
+			border-radius: 20px;
+			background: #CCC;
+			color: #000;
+		}
+	#sendercont {
+		position: relative;
+		margin-top: 80px;
+	}
+	#sender {
+		position: absolute;
+		background: #444;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+		#messagercont {
+			margin: 20px;
+			margin-right: 180px;
+		}
+			#messager {
+				background: #333;
+				border: none;
+				font-size: 40px;
+				height: 70px;
+				padding: 15px;
+				color: #fff;
+				width: 100%;
+			}
+		#send {
+			float: right;
+			vertical-align: middle;
+			margin: 20px;
+			margin-top: -92px;
+		}
