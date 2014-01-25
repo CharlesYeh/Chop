@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="includes/main.css" />
+		<link rel="stylesheet" media='screen and (min-height: 900px)' href="includes/main.css" />
+    <link rel='stylesheet' media='screen and (max-height: 900px)' href='includes/short.css' />
     <script language="javascript" type="text/javascript" src="includes/jquery-1.8.2.min.js"></script>
     <script language="javascript" type="text/javascript" src="includes/main.js"></script>
   </head>
