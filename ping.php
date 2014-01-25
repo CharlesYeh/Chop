@@ -2,7 +2,7 @@
 
 require('database.php');
 
-$user		= 
+$user		= $_REQUEST['user'];
 $value 	= $_REQUEST['value'];
 $blurb 	= $_REQUEST['blurb'];
 $longitude	= $_REQUEST['longitude'];
