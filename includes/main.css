@@ -156,7 +156,7 @@ body {
 	bottom: 20px;
 }
 #chatroom {
-	bottom: 120px;
+	bottom: 150px;
 }
 	#chatTitle {
 		font-family: ApercuBold;
@@ -165,7 +165,7 @@ body {
 		background: #444;
 		height: 100%;
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 		.bubble {
 			width: 70%;
@@ -179,7 +179,7 @@ body {
 		}
 	#sendercont {
 		position: relative;
-		margin-top: 80px;
+		margin-top: 110px;
 	}
 	#sender {
 		position: absolute;
