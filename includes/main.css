@@ -18,6 +18,7 @@
 
 body {
 	margin: 0px;
+	background-image: url("../images/bg.png");
 	background-color: #222;
 	color: #DBF1F8;
 	font-size: 40px;
@@ -27,7 +28,7 @@ body {
 	font-family: ApercuBold;
 	height: 180px;
 	margin: 40px;
-	background: #444;
+	background: rgba(255, 255, 255, .15);
 	text-align: right;
 	padding: 15px;
 }
@@ -49,7 +50,7 @@ body {
 	font-size: 120px;
 	padding-top: 100px;
 	
-	background: #444;
+	background: rgba(255, 255, 255, .15);
 	text-align: center;
 	vertical-align: middle;
 	
@@ -91,7 +92,7 @@ body {
 	float: left;
 }
 .half_footer {
-	background: #444;
+	background: rgba(255, 255, 255, .15);
 	width: 49%;
 	height: 100%;
 	float: left;
@@ -107,7 +108,7 @@ body {
 }
 .listitem {
 	height: 115px;
-	background: #444;
+	background: rgba(255, 255, 255, .15);
 	margin-bottom: 20px;
 	margin-left: 40px;
 	margin-right: 40px;
@@ -156,13 +157,13 @@ body {
 	bottom: 20px;
 }
 #chatroom {
-	bottom: 150px;
+	bottom: 170px;
 }
 	#chatTitle {
 		font-family: ApercuBold;
 	}
 	#messages {
-		background: #444;
+		background: rgba(255, 255, 255, .15);
 		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -183,7 +184,7 @@ body {
 	}
 	#sender {
 		position: absolute;
-		background: #444;
+		background: rgba(255, 255, 255, .15);
 		bottom: 0px;
 		left: 0px;
 		right: 0px;
